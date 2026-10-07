@@ -1,0 +1,17 @@
+{
+  "name": "nmea-pairing-backend",
+  "version": "1.0.0",
+  "private": true,
+  "description": "NMEA 0183 GGA/RMC pairing backend (API + CLI)",
+  "type": "commonjs",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "npm run build && node --test dist/test/nmea.test.js dist/test/pairing.test.js dist/test/store.test.js",
+    "start": "npm run build && node dist/src/cli.js serve",
+    "demo": "npm run build && node dist/src/cli.js demo"
+  },
+  "devDependencies": {
+    "typescript": "^5.5.0",
+    "@types/node": "^22.0.0"
+  }
+}
