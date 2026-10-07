@@ -1,0 +1,22 @@
+{
+  "name": "nmea-obs-backend",
+  "version": "1.0.0",
+  "description": "离线 NMEA 0183 GGA/RMC 语句校验与同秒观测配对后端（API + CLI）",
+  "type": "module",
+  "bin": {
+    "nmea-obs": "dist/src/cli.js"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "npm run build && node --test dist/test/",
+    "start": "node dist/src/cli.js serve",
+    "demo": "npm run build && node dist/src/cli.js demo"
+  },
+  "engines": {
+    "node": ">=22.5"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "typescript": "^5.7.0"
+  }
+}
